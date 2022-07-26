@@ -63,6 +63,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
+gem "pg", "~> 1.1"
 
 end
 
@@ -77,6 +78,7 @@ group :development do
   # gem "spring"
 
   gem 'guard', '~> 2.18'
+gem "pg", "~> 1.1"
 
 
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2' , require: false
@@ -87,4 +89,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "pg", "~> 1.1"
+
 end
