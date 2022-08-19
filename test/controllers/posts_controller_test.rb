@@ -1,7 +1,8 @@
 require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    @post = posts(:one)
+    sign_in users(:one)
+  end
 end

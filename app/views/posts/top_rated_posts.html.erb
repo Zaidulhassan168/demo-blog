@@ -1,0 +1,22 @@
+<section class="section">
+    <div class="container">
+        <% @posts.each do |post| %>
+        <div class="box">
+            <p><%= post.userName%> </p>
+            <h1 class="title">
+            <%= link_to post.title ,post %>
+            </h1>
+            <p>
+            <%= post.content %>
+            <%# <%= current_user.to_json%>
+            </p>
+            <p>rating
+             <%= post.total_rating %>
+            </p>
+
+        
+            
+        </div>
+        <% end %>
+    </div>
+</section>

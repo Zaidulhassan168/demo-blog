@@ -1,4 +1,4 @@
-<% content_for :page_title ,"Index"%>
+<% content_for :page_title ,"All Posts"%>
 <section class="section">
     <div class="container">
         <% @posts.each do |post| %>
@@ -14,4 +14,5 @@
         </div>
         <% end %>
     </div>
+    <%= will_paginate @post,renderer: BootstrapPagination::Rails %>
 </section>
