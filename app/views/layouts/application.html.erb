@@ -16,10 +16,10 @@
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
-            <div class="navbar-brand">
-              <%= link_to 'Demo Blog', root_path, class: "navbar-item" %>
+              <%= link_to 'All Posts', root_path, class: "navbar-item" %>
               <%= link_to 'Sign In', new_user_session_path, class: "navbar-item" %>
               <%= button_to 'Sign Out',  destroy_user_session_path, class: "navbar-item", method: 'delete' %>
+              <%= link_to 'My posts', '/show_by_user', class: "navbar-item" %>
 
               <span class="navbar-burger burger" data-target="navbarMenuHeroA">
                 <span></span>

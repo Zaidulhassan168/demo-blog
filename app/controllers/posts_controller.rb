@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  
   def index
     @posts = Post.all.order('created_at DESC')
   end
@@ -17,6 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.userName = current_user.email
     if @post.save
       redirect_to @post
     else
@@ -26,6 +26,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+  end
+
+  def show_by_user
+    @posts = Post.where(userName: current_user.email).order('created_at DESC')
   end
 
   def update
@@ -40,7 +44,6 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
-
 
   def destroy
     @post = Post.find(params[:id])
