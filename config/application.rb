@@ -21,7 +21,7 @@ module DemoBlog
     # config.eager_load_paths << Rails.root.join("extras")
     config.middleware.use CustomRateLimit
     # config.middleware.use Rack::Attack
-   
+    config.middleware.use Rack::RubyProf, path: './tmp/profile'
 
   end
 end

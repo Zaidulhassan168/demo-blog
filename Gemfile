@@ -83,7 +83,10 @@ group :development, :test do
   gem 'factory_bot'
   gem 'rspec', '~> 3.11'
   gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
-end
+  gem 'simplecov', '~> 0.21.2'
+  gem 'minitest-color', '~> 0.0.2'
+  # gem 'minitest-colorize', '~> 0.0.5'
+  end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
@@ -115,3 +118,5 @@ end
 gem 'graphiql-rails', group: :development
 gem 'graphql', '~> 2.0'
 gem 'redis', '~> 4.7', '>= 4.7.1'
+
+gem "ruby-prof", "~> 1.4"

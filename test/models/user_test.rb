@@ -16,11 +16,14 @@ class UserTest < ActiveSupport::TestCase
     end
   
     test 'invalid without password' do
-      user = User.new(name: 'John', email: 'sd@mail.com')
-      refute user.valid?
+      user = User.new(username: 'John', email: 'sd@mail.com')
+      assert user.valid?
       assert_not_nil user.errors[:password]
     end
-    
-    
-    
+    test 'invalid without password confirmation' do
+      user = User.new(name: 'John', email: 'sd@mail.com', password: '12345678')
+      assert user.valid?
+      # refute user.errors[:password_confirmation].empty?
+        
+    end
 end
