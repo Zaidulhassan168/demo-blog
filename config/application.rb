@@ -1,6 +1,7 @@
 require_relative "boot"
 require "rails/all"
 require 'base64'
+require 'sprockets/railtie'
 
 require_relative '../lib/middlewares/custom_rate_limit'
 # Require the gems listed in Gemfile, including any gems
