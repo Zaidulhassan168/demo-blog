@@ -22,6 +22,6 @@ module DemoBlog
     config.middleware.use CustomRateLimit
     # config.middleware.use Rack::Attack
     config.middleware.use Rack::RubyProf, path: './tmp/profile'
-
+    config.assets.initialize_on_precompile = false
   end
 end
