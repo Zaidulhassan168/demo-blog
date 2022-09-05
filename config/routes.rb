@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql' if Rails.env.development?
+  if Rails.env.development? || Rails.env.staging?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  end
+  # mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql' if Rails.env.development?
   post '/graphql', to: 'graphql#execute'
   # post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users # , controllers: { sessions: 'users/sessions' }
