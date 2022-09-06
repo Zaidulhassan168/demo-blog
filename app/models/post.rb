@@ -6,7 +6,11 @@ end
 
 class Post < ApplicationRecord
   attr_accessor :user_email
+   include AlgoliaSearch
 
+   algoliasearch do 
+    attributes :title, :content, :userName
+   end
   has_many :comments, dependent: :destroy
   validates :title, presence: true, length: { minimum: 5 }
   validates :content, presence: true, length: { minimum: 10 }
