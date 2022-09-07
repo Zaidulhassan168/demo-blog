@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     
     # @posts = Post.last(2)
     # @posts =  Post.all.order('created_at DESC')
-    @posts = Post.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    @posts = Post.paginate(page: params[:page], per_page: 10).order('created_at DESC')
   end
 
   before_action :authenticate_user!, except: %i[index show]
@@ -57,7 +57,6 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
     redirect_to posts_path
   end
 

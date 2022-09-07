@@ -59,13 +59,13 @@ gem 'binding_of_caller'
 
 # gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'in-parallel', '~> 0.1.17'
-gem 'ratyrate', '~> 1.2.2.alpha'
+# gem 'ratyrate', '~> 1.2.2.alpha'
 
 gem 'grape', '~> 0.14.0'
 gem 'grape-entity', '~> 0.7.1'
 gem 'grape_on_rails_routes', '~> 0.3.2'
-gem 'rack-attack'
-gem 'rack-throttle', '~> 0.7.0'
+# gem 'rack-attack'
+# gem 'rack-throttle', '~> 0.7.0'
 gem 'rubocop-rails', require: false
 gem 'ruby-limiter'
 gem 'will_paginate', '~> 3.3.0'
