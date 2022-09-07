@@ -11,13 +11,13 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    console
+    # console
     super
   end
 
   # DELETE /resource/sign_out
   def destroy
-    console
+    # console
     super
   end
 
