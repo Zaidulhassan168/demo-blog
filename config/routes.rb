@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # mount ActionCable.server => '/cable'
+  mount ActionCable.server => '/wssocket'
   # if Rails.env.development? || Rails.env.staging?
   #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   # end

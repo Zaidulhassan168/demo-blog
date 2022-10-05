@@ -71,6 +71,7 @@ gem 'ruby-limiter'
 gem 'will_paginate', '~> 3.3.0'
 gem 'will_paginate-bootstrap'
 gem "algoliasearch-rails"
+gem "anycable-rails"
 # gem 'rspec', '~> 3.11'
 # gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
 group :development, :test do

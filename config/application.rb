@@ -13,6 +13,7 @@ module DemoBlog
     config.load_defaults 7.0
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -24,5 +25,6 @@ module DemoBlog
     # config.middleware.use Rack::Attack
     # config.middleware.use Rack::RubyProf, path: './tmp/profile'
     config.assets.initialize_on_precompile = false
+    config.action_cable.mount_path = '/wsssocket'
   end
 end
