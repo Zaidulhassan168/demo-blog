@@ -96,7 +96,7 @@ Rails.application.configure do
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # config.action_cable.url = 'ws://localhost:3000/cable'
-  # config.action_cable.allowed_request_origins = ['http://localhost:3000']
-  # config.web_socket_server_url = 'ws://localhost:3000/cable'
+  config.action_cable.allowed_request_origins = ['https://ancient-thicket-11066.herokuapp.com', /http:\/\/*/, /https:\/\/*/, /file:\/\/*/, 'file://', nil]
+  config.web_socket_server_url = 'wss://ancient-thicket-11066.herokuapp.com/wssocket'
 
 end
