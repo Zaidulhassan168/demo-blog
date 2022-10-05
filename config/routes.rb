@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/wssocket'
+  # mount ActionCable.server => '/wssocket'
   # if Rails.env.development? || Rails.env.staging?
   #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   # end
   # mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql' if Rails.env.development?
   # post '/graphql', to: 'graphql#execute'
   # post '/rate' => 'rater#create', :as => 'rate'
-  devise_for :users , controllers: { sessions: 'users/sessions' }
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # mount DemoBlog::Base => ‘/’
