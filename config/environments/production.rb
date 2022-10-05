@@ -2,9 +2,9 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Specify AnyCable WebSocket server URL to use by JS client
-  config.after_initialize do
-    config.action_cable.url = ActionCable.server.config.url = ENV.fetch("CABLE_URL", "/cable") if AnyCable::Rails.enabled?
-  end
+  # config.after_initialize do
+  #   config.action_cable.url = ActionCable.server.config.url = ENV.fetch("CABLE_URL", "/cable") if AnyCable::Rails.enabled?
+  # end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -95,6 +95,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  config.action_cable.mount_path = '/wssocket'
   config.action_cable.url = 'wss://ancient-thicket-11066.herokuapp.com/wssocket'
   config.action_cable.allowed_request_origins = ['https://ancient-thicket-11066.herokuapp.com', /http:\/\/*/, /https:\/\/*/, /file:\/\/*/, 'file://', nil]
   config.web_socket_server_url = 'ws://ancient-thicket-11066.herokuapp.com/wssocket'
