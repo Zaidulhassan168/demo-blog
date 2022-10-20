@@ -14,7 +14,7 @@ module Mutations
       # ensures the user has entered the correct password
       return unless user.authenticate
       
-      ip_add = user.local_ip
+      ip_add = user.local_ip 
 
       # use Ruby on Rails - ActiveSupport::MessageEncryptor, to build a token
       crypt = ActiveSupport::MessageEncryptor.new(Rails.application.credentials.secret_key_base.byteslice(0..31))
